@@ -35,7 +35,9 @@ namespace JokesWebApp.Controllers
         //POST: Jokes/ShowSearchResults
         public async Task<IActionResult> ShowSearchResults(String SearchPhrase)
         {
+#pragma warning disable CS8604 // Possible null reference argument.
             return View("Index", await _context.Joke.Where(j => j.JokeQuestion.Contains(SearchPhrase)).ToListAsync());
+#pragma warning restore CS8604 // Possible null reference argument.
 
         }
 
