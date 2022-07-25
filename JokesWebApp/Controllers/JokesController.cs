@@ -32,14 +32,55 @@ namespace JokesWebApp.Controllers
         {
             return View();
         }
-        //POST: Jokes/ShowSearchResults
-        public async Task<IActionResult> ShowSearchResults(String SearchPhrase)
-        {
-#pragma warning disable CS8604 // Possible null reference argument.
-            return View("Index", await _context.Joke.Where(j => j.JokeQuestion.Contains(SearchPhrase)).ToListAsync());
-#pragma warning restore CS8604 // Possible null reference argument.
 
+
+        //GET: Jokes/ShowSearchForm1(FOR PRACTICE)
+        public async Task<IActionResult> ShowSearchForm1 (string searchString)
+        {
+            var movies = from m in _context.Joke
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(s => s.JokeQuestion!.Contains(searchString));
+            }
+
+            return View("Index", await movies.ToListAsync());
         }
+
+        //POST: Jokes/ShowSearchResults
+        public async Task<IActionResult> ShowSearchResults(string SearchPhrase)
+        {
+
+            var word = from w in _context.Joke
+                       select w;
+
+            if (!String.IsNullOrEmpty(SearchPhrase))
+            {
+                word = word.Where(s => s.JokeQuestion!.Contains(SearchPhrase));
+            }
+
+            return View("Index", await word.ToListAsync());
+        }
+
+        //public async Task<IActionResult> ShowSearchResults(string SearchPhrase)
+        //{
+
+        //    var word = from w in _context.Joke
+        //                 select w;
+
+        //    if (!String.IsNullOrEmpty(SearchPhrase))
+        //    {
+        //        word = word.Where(s => s.JokeQuestion!.Contains(SearchPhrase));
+        //    }
+
+        //    return View("Index", await word.ToListAsync());
+
+        //#pragma warning disable CS8604 // Possible null reference argument.
+        //            return View("Index", await _context.Joke.Where(j => j.JokeQuestion.Contains(SearchPhrase)).ToListAsync());
+        //#pragma warning restore CS8604 // Possible null reference argument.
+
+        //}
 
         // GET: Jokes/Details/5
         public async Task<IActionResult> Details(int? id)
