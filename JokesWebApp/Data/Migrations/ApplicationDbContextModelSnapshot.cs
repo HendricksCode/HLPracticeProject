@@ -22,6 +22,23 @@ namespace JokesWebApp.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("JokesWebApp.Models.Category", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"), 1L, 1);
+
+                    b.Property<string>("JokeCategory")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CategoryId");
+
+                    b.ToTable("Category");
+                });
+
             modelBuilder.Entity("JokesWebApp.Models.Joke", b =>
                 {
                     b.Property<int>("Id")
@@ -34,11 +51,16 @@ namespace JokesWebApp.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("JokeCategoryCategoryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("JokeQuestion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("JokeCategoryCategoryId");
 
                     b.ToTable("Joke");
                 });
@@ -243,6 +265,17 @@ namespace JokesWebApp.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("JokesWebApp.Models.Joke", b =>
+                {
+                    b.HasOne("JokesWebApp.Models.Category", "JokeCategory")
+                        .WithMany()
+                        .HasForeignKey("JokeCategoryCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("JokeCategory");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

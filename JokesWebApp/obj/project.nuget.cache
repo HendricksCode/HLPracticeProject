@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vSo4zjpo5KFzno32m+84+9qJAzmUSInoGKKrcOpG3G5s/ZWmsVqPBuQ47ctY/qCeOE4kUdbDJ3DkToFZ4m7xPA==",
+  "dgSpecHash": "AhfctAXZk7qZqtBRRCDYgx4HvR+p2XdWmvl4sEG3QED6LPRj6S4+/bH22LKOXQqfAbCONGwHGaclU+O52VA6ew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kchendr1\\source\\repos\\JokesWebApp\\JokesWebApp\\JokesWebApp.csproj",
+  "projectFilePath": "C:\\Users\\kchendr1\\source\\repos\\JokesWebApplication\\HLPracticeProject\\JokesWebApp\\JokesWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kchendr1\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\kchendr1\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

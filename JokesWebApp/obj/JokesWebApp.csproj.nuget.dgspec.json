@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kchendr1\\source\\repos\\JokesWebApp\\JokesWebApp\\JokesWebApp.csproj": {}
+    "C:\\Users\\kchendr1\\source\\repos\\JokesWebApplication\\HLPracticeProject\\JokesWebApp\\JokesWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kchendr1\\source\\repos\\JokesWebApp\\JokesWebApp\\JokesWebApp.csproj": {
+    "C:\\Users\\kchendr1\\source\\repos\\JokesWebApplication\\HLPracticeProject\\JokesWebApp\\JokesWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kchendr1\\source\\repos\\JokesWebApp\\JokesWebApp\\JokesWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\kchendr1\\source\\repos\\JokesWebApplication\\HLPracticeProject\\JokesWebApp\\JokesWebApp.csproj",
         "projectName": "JokesWebApp",
-        "projectPath": "C:\\Users\\kchendr1\\source\\repos\\JokesWebApp\\JokesWebApp\\JokesWebApp.csproj",
+        "projectPath": "C:\\Users\\kchendr1\\source\\repos\\JokesWebApplication\\HLPracticeProject\\JokesWebApp\\JokesWebApp.csproj",
         "packagesPath": "C:\\Users\\kchendr1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kchendr1\\source\\repos\\JokesWebApp\\JokesWebApp\\obj\\",
+        "outputPath": "C:\\Users\\kchendr1\\source\\repos\\JokesWebApplication\\HLPracticeProject\\JokesWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kchendr1\\AppData\\Roaming\\NuGet\\NuGet.Config",
